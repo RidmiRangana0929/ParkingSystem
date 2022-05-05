@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="managementLoginContext" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: #f1ffe6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementLoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8e994" height="49.0" layoutX="10.0" layoutY="11.0" stroke="#b8e994" strokeType="INSIDE" width="630.0">
+         <effect>
+            <DropShadow color="#b8e994" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="26.0" layoutY="21.0" text="L o g i n" textFill="#06827c">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="204.0" text="Username" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="278.0" text="Password" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUsername" focusColor="#06827c" layoutX="215.0" layoutY="200.0" prefHeight="31.0" prefWidth="358.0" unFocusColor="#06827c" />
+      <JFXPasswordField fx:id="pwdPassword" focusColor="#06827c" layoutX="215.0" layoutY="274.0" prefHeight="31.0" prefWidth="358.0" unFocusColor="#06827c" />
+      <JFXButton buttonType="RAISED" layoutX="45.0" layoutY="334.0" onAction="#cancelOnAction" prefHeight="37.0" prefWidth="191.0" style="-fx-background-color: #78e08f;" text="Cancel" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="412.0" layoutY="334.0" onAction="#loginOnAction" prefHeight="37.0" prefWidth="191.0" style="-fx-background-color: #78e08f;" text="Login" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="110.0" fitWidth="116.0" layoutX="269.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="inParkingVehicleContext" prefHeight="700.0" prefWidth="1325.0" style="-fx-background-color: #f1ffe6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InParkingVehicleListFormController">
+   <children>
+      <TableView fx:id="tblInParking" layoutX="17.0" layoutY="175.0" prefHeight="507.0" prefWidth="1290.0" style="-fx-background-color: #b8e994;">
+        <columns>
+          <TableColumn fx:id="colVehicleNumber" prefWidth="358.0" text="Vehicle Number" />
+          <TableColumn fx:id="colVehicleType" prefWidth="329.0" text="Vehicle Type" />
+            <TableColumn fx:id="colParkingSlot" prefWidth="312.0" text="Parking Slot" />
+            <TableColumn fx:id="colParkedTime" prefWidth="290.0" text="Parked Time" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8e994" height="49.0" layoutX="14.0" layoutY="21.0" stroke="#b8e994" strokeType="INSIDE" width="1296.0">
+         <effect>
+            <DropShadow color="#b8e994" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="40.0" layoutY="28.0" text="P a r k i n g   S y s t e m" textFill="#06827c">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbVehicleListType" focusColor="#06827c" layoutX="17.0" layoutY="105.0" onAction="#vehicleListTypeOnAction" prefHeight="31.0" prefWidth="274.0" promptText="In Parking" unFocusColor="#06827c" />
+      <JFXButton buttonType="RAISED" layoutX="465.0" layoutY="104.0" onAction="#addVehicleOnAction" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #78e08f;" text="Add Vehicle" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="104.0" onAction="#addDriverOnAction" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #78e08f;" text="Add Driver" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1051.0" layoutY="104.0" onAction="#logoutOnAction" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #78e08f;" text="Logout" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

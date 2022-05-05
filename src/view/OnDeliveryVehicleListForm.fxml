@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="onDeliveryVehicleContext" prefHeight="700.0" prefWidth="1325.0" style="-fx-background-color: #f1ffe6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OnDeliveryVehicleListFormController">
+   <children>
+      <TableView fx:id="tblOnDelivery" layoutX="18.0" layoutY="175.0" prefHeight="507.0" prefWidth="1290.0" style="-fx-background-color: #b8e994;">
+        <columns>
+          <TableColumn fx:id="colVehicleNumber" prefWidth="321.0" text="Vehicle Number" />
+          <TableColumn fx:id="colVehicleType" prefWidth="292.0" text="Vehicle Type" />
+            <TableColumn fx:id="colDriverName" prefWidth="363.0" text="Driver Name" />
+            <TableColumn fx:id="colLeftTime" prefWidth="313.0" text="Left Time" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8e994" height="49.0" layoutX="15.0" layoutY="20.0" stroke="#b8e994" strokeType="INSIDE" width="1296.0">
+         <effect>
+            <DropShadow color="#b8e994" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="41.0" layoutY="27.0" text="P a r k i n g   S y s t e m" textFill="#06827c">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbVehicleListType" focusColor="#06827c" layoutX="18.0" layoutY="102.0" onAction="#vehicleListTypeOnAction" prefHeight="31.0" prefWidth="274.0" promptText="On Delivery" unFocusColor="#06827c" />
+      <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="101.0" onAction="#addVehicleOnAction" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #78e08f;" text="Add Vehicle" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1052.0" layoutY="101.0" onAction="#addDriverOnAction" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #78e08f;" text="Add Driver" textFill="#06827c">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
